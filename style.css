@@ -9,3 +9,41 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.main--index {
+    min-height: 100vh;
+}
+
+.hero {
+    height: 64vh;
+    background-image: url(img/placeholder.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.destacados {
+    padding: 32px;
+    display: grid;
+    gap: 16px;
+}
+
+.team__person {
+    position: relative;
+    height: 64vh;
+}
+
+.team__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* //////////////////// MENU  ////////////////// */
+
+.menu__nav {
+    padding: 16px;
+    display: flex;
+    align-items: 16px;
+}
