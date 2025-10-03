@@ -2,10 +2,63 @@
     font-size: 16px;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    --verde-oscuro: #021C10;
+    --verde-apagado: #18311D;
+    --verde-medio: #104C30;
+    --verde-claro: #03812D;
+    --verde-neon: #0BDA51;
+    --marron-oscuro: #311E17;
+    --marron-medio: #816242;
+    --naranja-pastel: #C7BDA8;
 }
+
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.contenedor_fondo {
+    background-image: url('img/vegano.jpg');/* Cambia la ruta a la imagen de fondo */
+    background-attachment: fixed; /* Hace que la imagen de fondo sea fija */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Ajusta la altura según sea necesario */
+    width: auto;
+    
+}
+
+.contenedor_logo img {
+    width: 120px;
+    height: auto;
+}
+
+.fondo__h2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.fondo__h1 {
+    font-size: 5em;
+    position: absolute;
+    top: 35%;
+    left: 41%;
+    color: rgb(253, 253, 253);
+}
+
+.contenedor_logo {
+    position: absolute;
+    top: 0px;
+    left: 45%;
+}
+
+
