@@ -1,3 +1,23 @@
+@font-face {
+    font-family: '';
+    src: url();
+}
+
+@font-face {
+    font-family: '';
+    src: url();
+}
+
+@font-face {
+    font-family: '';
+    src: url();
+}
+
+@font-face {
+    font-family: '';
+    src: url();
+}
+
 :root {
     font-size: 16px;
     scrollbar-width: none;
@@ -11,8 +31,6 @@
     --marron-medio: #816242;
     --naranja-pastel: #C7BDA8;
 }
-
-
 
 * {
     margin: 0;
@@ -61,4 +79,70 @@
     left: 45%;
 }
 
+a {
+    transition: border 1s ease-out cubic;
+}
 
+a:hover {
+    border: 2px solid #750075;
+}
+
+/* //////////////////// INDEX  ////////////////// */
+.main--index {
+    min-height: 100vh;
+}
+
+.hero {
+    height: 64vh;
+    background-image: url(img/placeholder.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero__h2 {
+    animation: hero__h2 0.5s ease-in 1s;
+}
+
+.destacados {
+    padding: 32px;
+    display: grid;
+    gap: 16px;
+}
+
+.historia__img {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.team__person {
+    position: relative;
+    height: 40vh;
+}
+
+.team__img {
+    position: absolute;
+    top: -64px;
+    left: 64px;
+}
+
+/* //////////////////// MENU  ////////////////// */
+
+.menu__nav {
+    padding: 16px;
+    display: flex;
+    align-items: 16px;
+}
+
+.menu__img {
+    width: 100%;
+}
+
+/* //////////////////// KEYFRAMES  ////////////////// */
+@keyframes hero__h2 {}
+
+/* //////////////////// MEDIAQUERIES  ////////////////// */
+@media screen {}
