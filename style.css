@@ -38,31 +38,72 @@
     box-sizing: border-box;
 }
 
-.contenedor_fondo {
-    background-image: url('img/vegano.jpg');/* Cambia la ruta a la imagen de fondo */
-    background-attachment: fixed; /* Hace que la imagen de fondo sea fija */
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 100vh; /* Ajusta la altura según sea necesario */
+.cont {
+    background-image: url('img/fondo1.png');
+    /* Cambia la ruta a la imagen de fondo */
+    background-attachment: fixed;
+    /* Hace que la imagen de fondo sea fija */
+    background-size: cover;
+    /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    height: 100vh;
+    /* Ajusta la altura según sea necesario */
     width: auto;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
-.contenedor_logo img {
-    width: 120px;
+.cont_logo img {
+    width: 60px;
     height: auto;
+}
+
+.btn_reserva {
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    border: none;
+}
+
+.nav1 li {
+    transition: opacity 600ms, visibility 600ms;
+    opacity: 10;
+    visibility: var(--verde-medio);
+}
+
+.nav1__cont {
+    position: absolute;
+    top: 6%;
+    left: 90%;
+    /* opacity: 0;
+    visibility: hidden;
+    transition: opacity 600ms, visibility 600ms; */
+}
+
+.nav1__cont a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav1__cont li {
+    color: var(--naranja-pastel);
+    /* list-style-type: none; */
+
 }
 
 .fondo__h2 {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 36%;
+    /* transform: translate(-50%, -50%); */
     color: white;
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    z-index: 1;
+
 }
 
 .fondo__h1 {
@@ -73,10 +114,15 @@
     color: rgb(253, 253, 253);
 }
 
-.contenedor_logo {
+.fondo__p1 {
     position: absolute;
-    top: 0px;
-    left: 45%;
+    top: 57%;
+    color: var(--naranja-pastel);
+}
+
+.nav1 {
+    display: flex;
+    justify-content: space-around;
 }
 
 a {
