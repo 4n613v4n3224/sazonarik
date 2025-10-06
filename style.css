@@ -39,28 +39,41 @@
     box-sizing: border-box;
 }
 
+header {
+    position: absolute;
+
+}
+
 .cont {
     background-image: url('img/fondo1.png');
-    /* Cambia la ruta a la imagen de fondo */
     background-attachment: fixed;
-    /* Hace que la imagen de fondo sea fija */
     background-size: cover;
-    /* Asegura que la imagen cubra todo el contenedor */
     background-position: center;
-    /* Centra la imagen */
     background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
     height: 100vh;
-    /* Ajusta la altura según sea necesario */
     width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cont_logo img {
+.header__imgmenu img{
+    width: 40px;
+    height: auto;
+    z-index: 1;
+}
+
+.header_ul ul {
+
+}
+
+.header__menu {
+    display: flex;
+}
+.header__logo {
     width: 60px;
     height: auto;
+
 }
 
 .btn_reserva {
@@ -72,11 +85,11 @@
     border: none;
 }
 
-.nav1 li {
+/* .nav1 li {
     transition: opacity 600ms, visibility 600ms;
     opacity: 10;
     visibility: var(--verde-medio);
-}
+} */
 
 .nav1__cont {
     position: absolute;
@@ -103,6 +116,7 @@
     top: 36%;
     /* transform: translate(-50%, -50%); */
     color: white;
+
 
 }
 
