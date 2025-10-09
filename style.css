@@ -191,7 +191,102 @@ a:hover {
     border: 2px solid #750075;
 } */
 
+ /* ///////////////     RESERVAS       ////////////// */
 
+.reserva {
+    font-family: 'Figtree' ; 
+    background-color: var(--);
+    color: var(--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} 
+
+.reserva__cont {
+    background-color: var(--);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+     width: 100%; 
+    max-width: 450px; 
+ 
+
+}
+
+.reserva__header h1 {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.reserva__header p {
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+/* --- Estilos  --- */
+.reserva__datos {
+    margin-bottom: 25px;
+}
+
+.reserva__datos label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+/* Estilo para todos los Inputs y Selects */
+
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Esto es clave para estilizar el selector nativo: */
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"]:focus,
+select:focus {
+    border-color: var(--);
+    box-shadow: 0 0 0 2px rgba(231, 111, 81, 0.2);
+    outline: none;
+}
+
+.reserva__mensaje {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+/* --- Botón Reserva --- */
+
+.reserva__btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--);
+    color: var(--);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.reserva__btn:hover {
+    background-color: #d15a40;
+    transform: translateY(-1px);
+}
 
 
 
