@@ -10,165 +10,190 @@
 </head>
 
 <body>
-    <header class="header">
-        <header class="header">
-            <div class="cont">
-                <h2 class="fondo__h2">Unificando dietas </h2>
-                <h1 class="fondo__h1">Sazonarik</h1>
-                <p class="fondo__p1">Quos cum animi placeat recusandae earum
-                    cupiditate rerum. Veniam velit blanditiis reprehenderit debitis itaque ea excepturi in nostrum iusto.
-                    Officia, minima harum?</p>
-                <div class="cont_logo">
-                    <img src="img/logo/Logo.svg" alt="logo sazonarik">
-                </div>
-                <button class="btn_reserva">Reserva</button>
-                <nav class="nav1">
-                    <ul class="nav1__cont">
-                        <a href="#">🍂
-                            <li>Menú</li>
-                        </a>
-                        <a href="#">
-                            <li>Contacto</li>
-                        </a>
-                        <a href="#">
-                            <li>Reservas</li>
-                        </a>
-                        <a href="#">
-                            <li>Blog</li>
-                        </a>
-                    </ul>
+    <header>
+        <!-- HEADER -->
+        <div class="main__header">
+            <a class="logo" href="#">
+                <img src="img/logo/Logoblanco.png" alt="">
+            </a>
+
+            <!-- Checkbox invisible que controla el menú -->
+            <input type="checkbox" id="menulabel" class="menu-checkbox" />
+            <label for="menulabel" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+
+            <!-- MENÚ LATERAL -->
+            <aside class="menu-side">
+                <nav class="menu-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#menu">Menú</a>
+                    <a href="#reservas">Reservas</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#pedidos">Pedidos / Domicilio</a>
                 </nav>
-            </div>
-        </header>
+            </aside>
+        </div>
     </header>
-    <main class="main main--index">
-        <section class="hero">
-            <h2 class="hero__h2">Bienvenidos a Sazonarik, un restaurante donde el sabor no discrimina</h2>
-            <p class="hero__p">“Aquí la comida se celebra, se disfruta, se comparte… y ahora tienes platos veganos que
-                sorprenden.”</p>
-            <p class="hero__cta">Tu plato favorito puede que ya tenga versión vegana. Spoiler: sabe brutal</p>
-            <a href="#sectiondestacados" class="hero__menu">Reserva tu mesa</a>
-            <a href="#sectiondestacados" class="hero__menu">Ver menú</a>
-        </section>
-        <section class="destacados" id="sectiondestacados">
-            <h3 class="destacados__h3">“Especialidades Sazonarik”</h3>
-            <div class="destacados__carrusel">
-                <div class="destacados__card">
-                    <img src="img/placeholder.webp" alt="" class="destacados__img">
-                    <p class="destacados__title">Cordero Provenzal</p>
-                    <span>Carnosas como te gustan</span>
-                    <a href="" class="destacados__link">Mira más</a>
-                </div>
-                <div class="destacados__card">
-                    <img src="img/placeholder.webp" alt="" class="destacados__img">
-                    <p class="destacados__title">Pasta Trufada</p>
-                    <span>Carnosas como te gustan</span>
-                    <a href="" class="destacados__link">Mira más</a>
-                </div>
-                <div class="destacados__card">
-                    <img src="img/placeholder.webp" alt="" class="destacados__img">
-                    <p class="destacados__title">Pimientos encallados</p>
-                    <span>Carnosas como te gustan</span>
-                    <a href="" class="destacados__link">Mira más</a>
-                </div>
-                <div class="destacados__card">
-                    <img src="img/placeholder.webp" alt="" class="destacados__img">
-                    <p class="destacados__title">Bowl Forestal</p>
-                    <span>Carnosas como te gustan</span>
-                    <a href="" class="destacados__link">Mira más</a>
-                </div>
-                <div class="destacados__card">
-                    <img src="img/placeholder.webp" alt="" class="destacados__img">
-                    <p class="destacados__title">Risotto Verde Intenso</p>
-                    <span>Carnosas como te gustan</span>
-                    <a href="" class="destacados__link">Mira más</a>
-                </div>
-            </div>
-            <span class="destacados__cta">Aquí lo único difícil es decidir si compartes.</span>
-        </section>
-        <section class="gridexperiencie">
-            <h3 class="gridexperiencie__h3">Esta galeria se puede saborear</h3>
-            <div class="gridexperiencie__container">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--1">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--2">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--3">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--4">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--5">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--6">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--7">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--8">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--9">
-                <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--10">
-            </div>
 
-        </section>
-        <section class="historia section--dark">
-            <div class="historia__left">
-                <h3 class="historia__h2">De tradición a revolución (sin perder el buen gusto)</h3>
-                <p class="historia__p">“Nacimos entre recetas familiares, pero decidimos evolucionar. Hoy nuestra cocina abraza también lo vegano: sin etiquetas, solo con sabor.
-                    Nuestro viaje empezó con recetas familiares, de esas que hacen que la mesa se llene de risas y copas medio vacías. Pero el mundo cambia, y
-                    nosotros con él. Por eso decidimos abrir espacio en nuestra cocina para crear platos veganos con la misma dedicación, técnica y picardía que nos caracteriza.
-                </p>
-                <p class="historia__p">Porque la buena cocina no se trata de etiquetas, sino de sabor. Y de eso tenemos de sobra.</p>
-            </div>
-            <div class="historia__right">
-                <img src="img/placeholder.webp" alt="" class="historia__img">
-                <img src="img/placeholder.webp" alt="" class="historia__img historia__img--up">
-            </div>
 
-        </section>
-        <section class="team">
-            <h3 class="team__h3">Nuestro equipo - Los culpables de que esta experiencia sea inolvidable</h3>
-            <article class="team__persona">
-                <img src="img/placeholder.webp" alt="" class="team__img">
-                <span class="team__name">Manolo</span>
-                <p class="team__cargo">Dueño y mesero</p>
-                <p class="team__description">Su carisma contagia a cualquiera que tenga en frente</p>
-            </article>
-            <article class="team__persona">
-                <span class="team__name">Ana</span>
-                <p class="team__cargo">Jefe de cocina</p>
-                <p class="team__description">Hace magia con verduras</p>
-                <img src="img/placeholder.webp" alt="" class="team__img">
-            </article>
-            <article class="team__persona">
-                <span class="team__name">Luis</span>
-                <p class="team__cargo">Catador de vinos</p>
-                <p class="team__description">El maestro de sala que siempre sabe qué recomendar.</p>
-                <img src="img/placeholder.webp" alt="" class="team__img">
-            </article>
-            <article class="team__persona">
-                <span class="team__name">Clara</span>
-                <p class="team__cargo">Repostera</p>
-                <p class="team__description">Mujer super creativa, convirtió el “vamos a probar” en el postre más pedido.</p>
-                <img src="img/placeholder.webp" alt="" class="team__img">
-            </article>
-        </section>
-        <section class="testimonios">
-            <h3 class="testimonios__h3">Nuestros clientes lo dicen, no nosotros</h3>
-            <article class="testimonios__carrusel">
-                <p class="testimonios__text">“No pensé que lo vegano pudiera saber así”</p>
-                <p class="testimonios__text">“Vuelvo por los postres siempre”</p>
-                <p class="testimonios__text">“El ambiente es tan bueno como la comida.”</p>
-            </article>
-        </section>
-        <section class="eventos">
-            <h3 class="eventos__h3">“Aquí se come, pero también se vive”</h3>
-            <div class="eventos__grid">
-                <div class="eventos__img">Cena elegante 🍷</div>
-                <div class="eventos__img">Degustación maridada</div>
-                <div class="eventos__img">Música en vivo 🎶</div>
+
+
+    <!-- HERO PRINCIPAL  -->
+
+    <section class="hero__principal" id="inicio">
+        <div class="hero__img">
+            <div class="filtro"></div>
+            <div class="hero__logo">
+                <p>Unificando dietas</p>
+                <a class="logo2" href="#">
+                    <img src="img/logo/sazonarik_logo.png" alt="">
+                </a>
             </div>
-        </section>
-        <section class="ctafinal">
-            <p>¿Listo para probar lo nuevo?”</p>
-            <a href=""></a>
-            <span>Te estamos esperando</span>
-            <p>Apúntate a nuestra lista y entérate primero de los nuevos platos, catas y promos.</p>
-        </section>
-    </main>
-    <footer class="footer"></footer>
-    <!-- <script src="script.js"></script> -->
+        </div>
+        <main class="main main--index">
+
+            <section class="destacados" id="sectiondestacados">
+                <h3 class="destacados__h3">“Especialidades Sazonarik”</h3>
+                <div class="destacados__carrusel">
+
+                    <section class="hero">
+                        <h2 class="hero__h2">Bienvenidos a Sazonarik, un restaurante donde el sabor no discrimina</h2>
+                        <p class="hero__p">“Aquí la comida se celebra, se disfruta, se comparte… y ahora tienes platos
+                            veganos
+                            que
+                            sorprenden.”</p>
+                        <p class="hero__cta">Tu plato favorito puede que ya tenga versión vegana. Spoiler: sabe brutal
+                        </p>
+                        <a href="#sectiondestacados" class="hero__menu">Reserva tu mesa</a>
+                        <a href="#sectiondestacados" class="hero__menu">Ver menú</a>
+                    </section>
+                    <section class="destacados" id="sectiondestacados">
+                        <h3 class="destacados__h3">“Especialidades Sazonarik”</h3>
+                        <div class="destacados__card">
+                            <img src="img/placeholder.webp" alt="" class="destacados__img">
+                            <p class="destacados__title">Cordero Provenzal</p>
+                            <span>Carnosas como te gustan</span>
+                            <a href="" class="destacados__link">Mira más</a>
+                        </div>
+                        <div class="destacados__card">
+                            <img src="img/placeholder.webp" alt="" class="destacados__img">
+                            <p class="destacados__title">Pasta Trufada</p>
+                            <span>Carnosas como te gustan</span>
+                            <a href="" class="destacados__link">Mira más</a>
+                        </div>
+                        <div class="destacados__card">
+                            <img src="img/placeholder.webp" alt="" class="destacados__img">
+                            <p class="destacados__title">Pimientos encallados</p>
+                            <span>Carnosas como te gustan</span>
+                            <a href="" class="destacados__link">Mira más</a>
+                        </div>
+                        <div class="destacados__card">
+                            <img src="img/placeholder.webp" alt="" class="destacados__img">
+                            <p class="destacados__title">Bowl Forestal</p>
+                            <span>Carnosas como te gustan</span>
+                            <a href="" class="destacados__link">Mira más</a>
+                        </div>
+                        <div class="destacados__card">
+                            <img src="img/placeholder.webp" alt="" class="destacados__img">
+                            <p class="destacados__title">Risotto Verde Intenso</p>
+                            <span>Carnosas como te gustan</span>
+                            <a href="" class="destacados__link">Mira más</a>
+                        </div>
+                </div>
+                <span class="destacados__cta">Aquí lo único difícil es decidir si compartes.</span>
+            </section>
+            <section class="gridexperiencie">
+                <h3 class="gridexperiencie__h3">Esta galeria se puede saborear</h3>
+                <div class="gridexperiencie__container">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--1">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--2">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--3">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--4">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--5">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--6">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--7">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--8">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--9">
+                    <img src="" alt="" class="gridexperiencie__image gridexperiencie__image--10">
+                </div>
+
+            </section>
+            <section class="historia section--dark">
+                <div class="historia__left">
+                    <h3 class="historia__h2">De tradición a revolución (sin perder el buen gusto)</h3>
+                    <p class="historia__p">“Nacimos entre recetas familiares, pero decidimos evolucionar. Hoy nuestra
+                        cocina abraza también lo vegano: sin etiquetas, solo con sabor.
+                        Nuestro viaje empezó con recetas familiares, de esas que hacen que la mesa se llene de risas y
+                        copas medio vacías. Pero el mundo cambia, y
+                        nosotros con él. Por eso decidimos abrir espacio en nuestra cocina para crear platos veganos con
+                        la misma dedicación, técnica y picardía que nos caracteriza.
+                    </p>
+                    <p class="historia__p">Porque la buena cocina no se trata de etiquetas, sino de sabor. Y de eso
+                        tenemos de sobra.</p>
+                </div>
+                <div class="historia__right">
+                    <img src="img/placeholder.webp" alt="" class="historia__img">
+                    <img src="img/placeholder.webp" alt="" class="historia__img historia__img--up">
+                </div>
+
+            </section>
+            <section class="team">
+                <h3 class="team__h3">Nuestro equipo - Los culpables de que esta experiencia sea inolvidable</h3>
+                <article class="team__persona">
+                    <img src="img/placeholder.webp" alt="" class="team__img">
+                    <span class="team__name">Manolo</span>
+                    <p class="team__cargo">Dueño y mesero</p>
+                    <p class="team__description">Su carisma contagia a cualquiera que tenga en frente</p>
+                </article>
+                <article class="team__persona">
+                    <span class="team__name">Ana</span>
+                    <p class="team__cargo">Jefe de cocina</p>
+                    <p class="team__description">Hace magia con verduras</p>
+                    <img src="img/placeholder.webp" alt="" class="team__img">
+                </article>
+                <article class="team__persona">
+                    <span class="team__name">Luis</span>
+                    <p class="team__cargo">Catador de vinos</p>
+                    <p class="team__description">El maestro de sala que siempre sabe qué recomendar.</p>
+                    <img src="img/placeholder.webp" alt="" class="team__img">
+                </article>
+                <article class="team__persona">
+                    <span class="team__name">Clara</span>
+                    <p class="team__cargo">Repostera</p>
+                    <p class="team__description">Mujer super creativa, convirtió el “vamos a probar” en el postre más
+                        pedido.</p>
+                    <img src="img/placeholder.webp" alt="" class="team__img">
+                </article>
+            </section>
+            <section class="testimonios">
+                <h3 class="testimonios__h3">Nuestros clientes lo dicen, no nosotros</h3>
+                <article class="testimonios__carrusel">
+                    <p class="testimonios__text">“No pensé que lo vegano pudiera saber así”</p>
+                    <p class="testimonios__text">“Vuelvo por los postres siempre”</p>
+                    <p class="testimonios__text">“El ambiente es tan bueno como la comida.”</p>
+                </article>
+            </section>
+            <section class="eventos">
+                <h3 class="eventos__h3">“Aquí se come, pero también se vive”</h3>
+                <div class="eventos__grid">
+                    <div class="eventos__img">Cena elegante 🍷</div>
+                    <div class="eventos__img">Degustación maridada</div>
+                    <div class="eventos__img">Música en vivo 🎶</div>
+                </div>
+            </section>
+            <section class="ctafinal">
+                <p>¿Listo para probar lo nuevo?”</p>
+                <a href=""></a>
+                <span>Te estamos esperando</span>
+                <p>Apúntate a nuestra lista y entérate primero de los nuevos platos, catas y promos.</p>
+            </section>
+        </main>
+        <footer class="footer"></footer>
+        <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
