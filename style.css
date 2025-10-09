@@ -40,6 +40,35 @@
     box-sizing: border-box;
 }
 
+/* ////////  CLASES GLOBALES ///////////*/
+h1,
+h2,
+h3 {
+    position: relative;
+    display: inline;
+    overflow: hidden;
+}
+
+h1::after,
+h2::after,
+h3::after {
+    content: "";
+    border-bottom: 2px solid var(--verde-neon);
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: -100%;
+    transition: 1s left ease;
+}
+
+.section--dark {
+    background-color: var(--verde-oscuro);
+    color: var(--naranja-pastel);
+}
+
+.menu__h2:hover::after {
+    left: 0%;
+}
 
 /* /////////--------- HEADER -------- /////////*/
 
@@ -179,55 +208,6 @@
     left: 31%;
     font-family: 'TangerineBold';
     color: var(--naranja-pastel);
-}
-
-
-
-/* a {
-    transition: border 1s ease-out cubic;
-}
-
-a:hover {
-    border: 2px solid #750075;
-} */
-
-
-
-
-
-.section--dark {
-    background-color: var(--verde-oscuro);
-    color: var(--naranja-pastel);
-}
-
-h1,
-h2,
-h3 {
-    position: relative;
-    display: inline;
-    overflow: hidden;
-}
-
-h1::after,
-h2::after,
-h3::after {
-    content: "";
-    border-bottom: 2px solid var(--verde-neon);
-    width: 100%;
-    position: absolute;
-    bottom: -1px;
-    left: -100%;
-    transition: 1s left ease;
-}
-
-/* h1:hover h1::after,
-h2:hover h2::after,
-h3:hover h3::after {
-    left: 0;
-    } */
-
-.menu__h2:hover::after {
-    left: 0%;
 }
 
 /* //////////////////// INDEX  ////////////////// */
@@ -394,18 +374,34 @@ h3:hover h3::after {
     width: 100%;
 }
 
-/* ///////// CARRITO /////// */
-
 /* //////////////////// PEDIDO  ////////////////// */
 .main--pedido {
     display: flex;
     min-height: 100vh;
 }
 
+.pedido__aside,
+.pedido {
+    position: relative;
+    width: 50%;
+    padding: 5vw;
+    background-color: #021C10;
+}
+
+.producto__img {
+    position: sticky;
+    top: 3vh;
+    background-color: yellow;
+    padding: 50px;
+    font-size: 20px;
+}
+
 .producto {
     width: 50%;
     background-color: #021C10;
 }
+
+/* ///////// CARRITO /////// */
 
 .main__carrito {
     font-family: 'Figtree';
@@ -444,7 +440,7 @@ h3:hover h3::after {
 }
 
 .progreso .step.completed::before {
-    
+
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -538,27 +534,7 @@ select:focus {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-} 
-
-
-@media (min-width: 992px) {
-    .formulario {
-        flex-direction: row;
-    }
-
-    .formulario__cont {
-        flex: 3;
-        order: 1;
-    }
-
-    .total__carrito {
-        flex: 2;
-        order: 2;
-    }
-
-   
 }
-
 
 /* --- ESTILOS FINALES Y BOTONES --- */
 .cart-summary-box h3 {
@@ -625,7 +601,7 @@ select:focus {
     background-color: #d15a40;
 }
 
-
+/* //////////////////// KEYFRAMES  ////////////////// */
 @keyframes historia__img--up {
     0% {
         opacity: 1;
@@ -636,8 +612,6 @@ select:focus {
     }
 }
 
-
-/* //////////////////// KEYFRAMES  ////////////////// */
 @keyframes hero__h2 {
     0% {
         opacity: 0;
@@ -650,6 +624,22 @@ select:focus {
 
 
 /* //////////////////// MEDIAQUERIES  ////////////////// */
+@media (min-width: 992px) {
+    .formulario {
+        flex-direction: row;
+    }
+
+    .formulario__cont {
+        flex: 3;
+        order: 1;
+    }
+
+    .total__carrito {
+        flex: 2;
+        order: 2;
+    }
+}
+
 @media (max-width: 768px) {}
 
 @media (max-width: 425px) {
