@@ -145,7 +145,7 @@ h2:hover::after {
     display: none;
 }
 
-/* ===== MENÚ LATERAL (OPTIMIZADO CON TRANSFORM) ===== */
+
 .menu-side {
     position: fixed;
     top: 0;
