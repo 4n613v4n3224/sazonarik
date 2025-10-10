@@ -196,7 +196,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    
+
 }
 
 
@@ -807,4 +807,94 @@ select:focus {
     }
 
 
+}
+
+/* MEDIA QUERIES para Móviles (Ajustes de Escala) */
+@media (max-width: 900px) {
+    
+    /* ---- HEADER ---- */
+    .main__header {
+        padding: 10px 15px; /* Menos padding */
+    }
+
+    .logo img {
+        height: 40px; /* Logo más pequeño */
+    }
+
+    .reservar__header {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    /* ---- MENÚ LATERAL ---- */
+    .menu-side {
+        width: 220px; /* Un poco más ancho para tablets */
+    }
+
+    .menu-links a {
+        font-size: 18px;
+    }
+
+    /* ---- HERO ---- */
+    .logo2 img {
+        max-height: 300px; /* Logo del hero más pequeño */
+    }
+
+    .hero__logo p {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ======================================================= */
+/* ========= 2. MEDIA QUERY PARA MÓVILES (<= 600px) ========= */
+/* ======================================================= */
+
+@media (max-width: 600px) {
+    
+    :root {
+        font-size: 16px; /* Reducimos la fuente base para ganar espacio */
+    }
+
+    /* ---- HEADER ---- */
+    .main__header {
+        padding: 8px 10px; /* Mínimo padding */
+    }
+
+    .logo img {
+        height: 35px;
+    }
+    
+   
+    .reservar__header {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+
+    /* ---- HERO ---- */
+    .logo2 img {
+        max-height: 200px; 
+    }
+
+    .hero__logo p {
+        font-size: 1.1rem; 
+        padding: 0 10px;
+    }
+
+    /* ---- MENÚ LATERAL ---- */
+    .menu-side {
+        width: 170px; 
+    }
+
+    .menu-links a {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+    
+
+    .menu-btn {
+        width: 25px;
+        height: 20px;
+    }
 }
