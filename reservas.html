@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main__reserva">
+        <div class="reserva__cont">
+
+            <header class="reserva__header">
+                <h1>Reservar</h1>
+                <p>Selecciona tu fecha, hora y el número de personas. </p>
+            </header>
+
+            <form action="">
+
+                <div class="reserva__datos">
+                    <label for="reserva__personas">¿Cuántas personas sois?</label>
+                    <select id="reserva__personas" name="reserva__personas" required>
+                        <option value="2" selected>2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="6">6 personas</option>
+                    </select>
+                </div>
+
+                <div class="reserva__datos">
+                    <label for="reserva__fecha">Selecciona la fecha</label>
+                    <input type="date" id="reserva__fecha" name="reserva__fecha" required>
+                </div>
+
+                <div class="reserva__datos">
+                    <label for="reserva__hora">Selecciona la hora</label>
+                    <select id="reserva__hora" name="reserva__hora" required>
+                        <option value="" disabled selected>Selecciona la hora</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                    </select>
+                    <p class="reserva__mensaje">La disponibilidad se confirmará al enviar.</p>
+                </div>
+
+                <div class="reserva__datos action-step">
+                    <button type="submit" class="reserva__btn">Reservar y Confirmar</button>
+                </div>
+
+            </form>
+
+        </div>
+        </form>
+    </main>
+
+    <footer class="footer__reservas">
+
+    </footer>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,900 @@
+@font-face {
+    font-family: 'Tangerine';
+    src: url(fonts/Tangerine/Tangerine-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'TangerineBold';
+    src: url(fonts/Tangerine/Tangerine-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url(fonts/Figtree/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'FigtreeItalic';
+    src: url(fonts/Figtree/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+:root {
+    font-size: 18px;
+    font-family: 'Figtree';
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    --verde-oscuro: #021C10;
+    --verde-apagado: #18311D;
+    --verde-medio: #104C30;
+    --verde-claro: #03812D;
+    --verde-neon: #0BDA51;
+    --marron-oscuro: #311E17;
+    --marron-medio: #816242;
+    --naranja-pastel: #C7BDA8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* /////////--------- HEADER -------- /////////*/
+
+.main__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--verde-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+
+    width: auto;
+    height: 50px;
+}
+
+
+.reservar__header {
+    /* padding: 10px;
+    text-transform: uppercase; */
+    background-color: var(--naranja-pastel);
+    color: var(--verde-oscuro);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Figtree', sans-serif;
+    font-size: 0.85rem;
+}
+
+.reservar__header:hover {
+    background-color: var(--verde-claro);
+    color: white;
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.menu-btn {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1100;
+    margin: 0;
+}
+
+.menu-btn span {
+    height: 3px;
+    width: 100%;
+    background-color: var(--naranja-pastel);
+    border-radius: 3px;
+    transition: transform 0.3s;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+/* ===== MENÚ LATERAL (OPTIMIZADO CON TRANSFORM) ===== */
+.menu-side {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 190px;
+    height: 100vh;
+    background-color: var(--verde-oscuro);
+    color: var(--naranja-pastel);
+    transform: translateX(100%);
+    /* Oculto fuera de la pantalla */
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+.menu-checkbox:checked~.menu-side {
+    transform: translateX(0);
+    /* Cuando la casilla de verificación (checkbox) del menú esté marcada,
+   haz que el menú lateral aparezca completamente en la pantalla. */
+    /* :checked:  pseudo-clase . elecciona el elemento solo cuando está en su estado "marcado".*/
+}
+
+
+/* ===== ENLACES DEL MENÚ ===== */
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 25px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: var(--naranja-pastel);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.menu-links a:hover {
+    color: var(--marron-medio);
+}
+
+/* ===== ANIMACIÓN DEL ICONO HAMBURGUESA ===== */
+.menu-checkbox:checked+.menu-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-checkbox:checked+.menu-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-checkbox:checked+.menu-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+.hero__img {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("img/comida/gemini.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.logo2 img {
+    width: auto;
+    max-height: 470px;
+
+}
+
+.filtro {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #021c10a5;
+}
+
+.hero__logo {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+
+}
+
+
+.hero__logo p {
+    font-size: 17px;
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    font-family: '';
+    color: var(--naranja-pastel);
+    text-transform: uppercase;
+}
+
+
+
+/* a {
+    transition: border 1s ease-out cubic;
+}
+
+a:hover {
+    border: 2px solid #750075;
+} */
+
+/* ///////////////     RESERVAS       ////////////// */
+
+.main__reserva {
+    font-family: 'Figtree';
+    background-image: url(img/comedor/filtro/salon1.png);
+    color: var(--naranja-pastel);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.reserva__cont {
+    background-color: var(--verde-oscuro);
+    padding: 40px;
+    border-radius: 0px 52px 0px;
+    box-shadow: 0 10px 30px black;
+    width: 100%;
+    max-width: 450px;
+
+
+}
+
+.reserva__header h1 {
+    color: var(--naranja-pastel);
+    font-size: 40px;
+    font-family: 'Figtree';
+    text-transform: uppercase;
+}
+
+.reserva__header p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    opacity: 0.7;
+    font-size: 15px;
+}
+
+/* --- Estilos  --- */
+.reserva__datos {
+    margin-bottom: 25px;
+}
+
+.reserva__datos label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+/* Estilo para todos los Inputs y Selects */
+
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Esto es clave para estilizar el selector nativo: */
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"]:focus,
+select:focus {
+    border-color: var(--);
+    box-shadow: 0 0 0 2px rgba(231, 111, 81, 0.2);
+    outline: none;
+}
+
+.reserva__mensaje {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+/* --- Botón Reserva --- */
+
+.reserva__btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #9e6f00;
+
+    border: none;
+    border-radius: 0px 30px 0px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.reserva__btn:hover {
+    background-color: #d15a40;
+    transform: translateY(-1px);
+}
+
+
+
+
+.checkout__section h1,
+h2,
+h3 {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
+/* h1::after,
+h2::after,
+h3::after {
+    content: "";
+    border-bottom: 2px solid var(--verde-neon);
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: -100%;
+    transition: 1s left ease;
+} */
+
+/* h1:hover h1::after,
+h2:hover h2::after,
+h3:hover h3::after {
+    left: 0;
+    } */
+
+.menu__h2:hover::after {
+    left: 0%;
+}
+
+/* //////////////////// INDEX  ////////////////// */
+.main--index {
+    min-height: 100vh;
+}
+
+.hero {
+    height: 64vh;
+    text-align: center;
+    background-image: url(img/vegano.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--verde-apagado);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__h2 {
+    animation: hero__h2 0.5s ease-in;
+}
+
+.destacados__carrusel {
+    padding: 32px;
+    display: flex;
+    gap: 16px;
+}
+
+.destacados__card {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.destacados__img {
+    width: 100%;
+}
+
+.historia {
+    display: flex;
+}
+
+.historia__left,
+.historia__right {
+    width: 50%;
+}
+
+.historia__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 8vw;
+}
+
+.historia__right {
+    position: relative;
+}
+
+.historia__img {
+    width: 100%;
+}
+
+.historia__img--up {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    animation: historia__img--up 0.5s ease-in 5s infinite;
+}
+
+.gridfood__container {
+    height: 70vh;
+    columns: 5;
+}
+
+
+.team__persona {
+    position: relative;
+    height: 40vh;
+}
+
+.team__img {
+    position: absolute;
+    top: -64px;
+    width: 30vw;
+}
+
+.team__img--left {
+    left: 64px;
+}
+
+.team__img--right {
+    right: 64px;
+}
+
+.testimonios {
+    height: 30vh;
+}
+
+.testimonios__carrusel {
+    display: flex;
+    height: 90%;
+    align-items: center;
+}
+
+.testimonios__text {
+    width: 100%;
+    text-align: center;
+}
+
+.eventos__grid {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ctafinal {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* //////////////////// MENU  ////////////////// */
+
+.menu__h2 {
+    scroll-snap-type: both mandatory;
+}
+
+.menu__nav {
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: 16px;
+    gap: 16px;
+    list-style-type: none;
+}
+
+.menu__enlace {
+    text-decoration: none;
+}
+
+
+.menu__group {
+    padding: 3em;
+    min-height: 35vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1vw;
+}
+
+.menu__card {
+    text-align: center;
+}
+
+.menu__img {
+    width: 100%;
+}
+
+/* ///////// CARRITO /////// */
+
+/* //////////////////// PEDIDO  ////////////////// */
+.main--pedido {
+    display: flex;
+    min-height: 100vh;
+}
+
+.producto {
+    width: 50%;
+    background-color: #021C10;
+}
+
+.main__carrito {
+    font-family: 'Figtree';
+    background-image: url(img/comedor/filtro/salon1.png);
+    color: var(--naranja-pastel);
+    margin: 0;
+    padding: 20px;
+    background-size: cover;
+}
+
+.checkout {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- BARRA DE PROGRESO (Estática) --- */
+.progreso {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--naranja-pastel);
+    color: var(--naranja-pastel);
+}
+
+
+/* --- COLUMNAS --- */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    /* Móvil se apila */
+    gap: 40px;
+}
+
+/* COLUMNA IZQUIERDA: FORMULARIO */
+.formulario__cont {
+    margin-top: 16px;
+    border-radius: 21px;
+    padding: 31px;
+    background-color: var(--verde-oscuro);
+}
+
+.formulario__section {
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--naranja-pastel);
+}
+
+.formulario__section h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Estilo de Inputs y Grupos */
+.cont__datos {
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+
+.cont__datos label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--naranja-pastel);
+}
+
+.checkout__opc {
+    appearance: auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="time"],
+select {
+    width: 100%;
+    margin-right: 7px;
+    padding: 12px;
+    border: 1px solid var(--verde-apagado);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.btn_pedido {
+    border-radius: 30px 2px 30px;
+    padding: 10px;
+    background-color: #9e6f00;
+    border: none;
+    cursor: pointer;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--verde-apagado);
+    outline: none;
+}
+
+/* --- OPCIONES DE PAGO --- */
+.metodo__pago {
+    display: block;
+    background-color: white;
+    border: 1px solid var(--verde-apagado);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    color: var(--verde-oscuro);
+}
+
+.opciones__cont {
+    margin-top: 30px;
+}
+
+.mensaje__carrito {
+    color: var(--naranja-pastel);
+    margin-top: 30px;
+}
+
+
+/* --- COLUMNA DERECHA: RESUMEN DEL CARRITO (STICKY) --- */
+.total__carrito {
+    padding: 20px;
+}
+
+.total__cont {
+    background-color: var(--verde-oscuro);
+    color: var(--naranja-pastel);
+    padding: 30px;
+    border-radius: 0px 52px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.888);
+}
+
+.total__cont--h3 {
+    color: var(--naranja-pastel);
+    padding-bottom: 10px;
+}
+
+
+
+
+/* --- ESTILOS FINALES Y BOTONES --- */
+.cart-summary-box h3 {
+    border-bottom: 2px solid var(--verde-medioç);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.productos__carrito {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    margin-top: 10px;
+}
+
+.item__carrito {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.item__carrito .span__carrito {
+    font-weight: 600;
+    color: var(--marron-medio);
+    margin-right: 8px;
+}
+
+.total__cont2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 2px dashed var(--naranja-pastel);
+}
+
+.subtotal {
+    border-top: 1px dashed var(--color-text-light);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.subtotal.cupon {
+    margin-top: 25px;
+}
+
+.total__final {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 15px 0;
+    border-top: 2px solid var(--naranja-pastel);
+}
+
+.btnpagar__carrito {
+    width: 100%;
+    padding: 15px 30px;
+    background-color: var(--verde-claro);
+    color: var(--naranja-pastel);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.btnpagar__carrito:hover {
+    background-color: #d15a40;
+}
+
+
+@keyframes historia__img--up {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* //////////////////// KEYFRAMES  ////////////////// */
+@keyframes hero__h2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* //////////////////// MEDIAQUERIES  ////////////////// */
+
+@media (max-width: 768px) {}
+
+@media (max-width: 425px) {
+    .destacados__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gridfood__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .formulario {
+        flex-direction: row;
+    }
+
+    .formulario__cont {
+        flex: 3;
+        order: 1;
+    }
+
+    .total__carrito {
+        flex: 2;
+        order: 2;
+    }
+
+
+}
+
+/* MEDIA QUERIES para Móviles (Ajustes de Escala) */
+@media (max-width: 900px) {
+    
+    /* ---- HEADER ---- */
+    .main__header {
+        padding: 10px 15px; /* Menos padding */
+    }
+
+    .logo img {
+        height: 40px; /* Logo más pequeño */
+    }
+
+    .reservar__header {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    /* ---- MENÚ LATERAL ---- */
+    .menu-side {
+        width: 220px; /* Un poco más ancho para tablets */
+    }
+
+    .menu-links a {
+        font-size: 18px;
+    }
+
+    /* ---- HERO ---- */
+    .logo2 img {
+        max-height: 300px; /* Logo del hero más pequeño */
+    }
+
+    .hero__logo p {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ======================================================= */
+/* ========= 2. MEDIA QUERY PARA MÓVILES (<= 600px) ========= */
+/* ======================================================= */
+
+@media (max-width: 600px) {
+    
+    :root {
+        font-size: 16px; /* Reducimos la fuente base para ganar espacio */
+    }
+
+    /* ---- HEADER ---- */
+    .main__header {
+        padding: 8px 10px; /* Mínimo padding */
+    }
+
+    .logo img {
+        height: 35px;
+    }
+    
+   
+    .reservar__header {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+
+    /* ---- HERO ---- */
+    .logo2 img {
+        max-height: 200px; 
+    }
+
+    .hero__logo p {
+        font-size: 1.1rem; 
+        padding: 0 10px;
+    }
+
+    /* ---- MENÚ LATERAL ---- */
+    .menu-side {
+        width: 170px; 
+    }
+
+    .menu-links a {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+    
+
+    .menu-btn {
+        width: 25px;
+        height: 20px;
+    }
+}
