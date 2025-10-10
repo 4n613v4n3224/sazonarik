@@ -9,15 +9,48 @@
 </head>
 
 <body>
-    <header class="header"></header>
-    <main class="main">
-        <aside class="producto"></aside>
-        <section class="">
+    <header class="header">
 
+    </header>
+    <main class="main main--pedido">
+        <aside class="pedido__aside"><img src="img/comida/colorful-salad-9506373_1280.jpg" alt="" class="pedido__img"></aside>
+        <section class="pedido">
+            <form action="" class="pedido__form">
+                <h2 class="pedido__h2">Ensalada Coliseo</h2>
+                <p class="pedido__description">Ensalada césar con lechugas frescas, salsa y crujientes picatostes.</p>
+                <p class="pedido__span">Elige una proteina:</p>
+                <select class="pedido__proteina">
+                    <option value="pollo">Tiras de pollo asado</option>
+                    <option value="tofu">Tofu marinado al limón</option>
+                </select>
+                <p class="pedido__span">Picatostes:</p>
+                <select class="pedido__picatostes">
+                    <option value="picafritos">Fritos</option>
+                    <option value="picatostados">Tostados</option>
+                </select>
+                <p class="pedido__span">Picante:</p>
+                <select class="pedido__picante">
+                    <option value="sipicante">Sí</option>
+                    <option value="nopicante">No</option>
+                </select>
+                <p class="pedido__span">Toppins: </p>
+                <select class="pedido__toppins">
+                    <option value="frutossecos">Frutos secos</option>
+                    <option value="sesamo">Semillas de sesamo</option>
+                </select>
+                <p class="pedido__span">Salsas: </p>
+                <select class="pedido__salsas">
+                    <option value="ketchup">Ketchup</option>
+                    <option value="mostazamiel">Mostaza y miel</option>
+                    <option value="mangocurry">Mango y curry</option>
+                    <option value="mayonesa">mayonesa</option>
+                </select>
+                <input type="button" value="Añadir al carrito" class="pedido__btn">
+            </form>
         </section>
     </main>
     <footer class="footer"></footer>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
