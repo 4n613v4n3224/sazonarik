@@ -60,9 +60,7 @@
 .logo img {
 
     width: auto;
-    height: 40px;
-
-
+    height: 50px;
 }
 
 
@@ -82,7 +80,7 @@
 }
 
 .reservar__header:hover {
-    background-color: var(--marron-medio);
+    background-color: var(--verde-claro);
     color: white;
 }
 
@@ -173,41 +171,43 @@
 .hero__img {
     position: relative;
     min-height: 100vh;
-    background-image: url("img/comida/sopa2.jpg");
+    background-image: url("img/comida/gemini.png");
     background-size: cover;
     background-position: center;
-    
+
 }
 
 .logo2 img {
     width: auto;
-    max-height: 300px;
+    max-height: 470px;
 
 }
 
 .filtro {
     width: 100%;
     min-height: 100vh;
-    background-color: #021c10a5;;
+    background-color: #021c10a5;
 }
 
 .hero__logo {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
     text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9); 
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    
 }
 
 
 .hero__logo p {
-    font-size: 40px;
+    font-size: 17px;
     position: absolute;
     top: 70%;
-    left: 31%;
-    font-family: 'TangerineBold';
+    left: 25%;
+    font-family: '';
     color: var(--naranja-pastel);
+    text-transform: uppercase;
 }
 
 
@@ -570,7 +570,10 @@ h3:hover h3::after {
 
 /* COLUMNA IZQUIERDA: FORMULARIO */
 .formulario__cont {
-    padding: 20px;
+    margin-top: 16px;
+    border-radius: 21px;
+    padding: 31px;
+    background-color: var(--verde-oscuro);
 }
 
 .formulario__section {
